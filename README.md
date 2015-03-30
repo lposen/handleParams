@@ -31,8 +31,10 @@ var params = $(window).handleParams({
 		$('#myform')[0].reset();
 		$('#page-number').val(1);
 	},
+	//parameters to parse
 	params: ["page"],
-	handleIndivParam: function(i, paramName, paramValue) {
+	//what to do with each individual parameter
+	handleIndivParam: function(index, paramName, paramValue) {
 	  if (paramName === "page") {
 	    $('#page-number').val(paramValue);
 	  }
